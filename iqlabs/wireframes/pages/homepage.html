@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage - IQ Labs Wireframe</title>
+  <link rel="stylesheet" href="../wireframe.css">
+</head>
+<body>
+  <div class="portal-wrapper">
+    <header class="portal-header">
+      <div class="portal-header__left">
+        <img src="../assets/cilantroe.png" alt="Cilantroe" class="portal-header__logo">
+        <span class="portal-header__divider"></span>
+        <nav class="portal-nav">
+          <span class="portal-nav__trigger">
+            Homepage
+            <svg class="portal-nav__chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+          <div class="portal-nav__menu">
+            <a href="homepage.html" class="portal-nav__item portal-nav__item--active">Homepage</a>
+            <a href="collections-list.html" class="portal-nav__item">Collections List</a>
+            <a href="collection.html" class="portal-nav__item">Collection Page</a>
+            <a href="product-display-page.html" class="portal-nav__item">Product Display Page</a>
+            <a href="cart.html" class="portal-nav__item">Cart</a>
+            <a href="cart-drawer.html" class="portal-nav__item">Cart Drawer</a>
+            <a href="contact.html" class="portal-nav__item">Contact</a>
+            <a href="about.html" class="portal-nav__item">About</a>
+            <a href="how-we-work.html" class="portal-nav__item">How We Work</a>
+            <a href="project-gallery.html" class="portal-nav__item">Project Gallery</a>
+            <a href="case-study.html" class="portal-nav__item">Case Study</a>
+            <a href="manufacturing-quality.html" class="portal-nav__item">Manufacturing & Quality</a>
+            <a href="certifications-standards.html" class="portal-nav__item">Certifications & Standards</a>
+            <a href="resources.html" class="portal-nav__item">Resources</a>
+            <a href="blog.html" class="portal-nav__item">Blog / Insights</a>
+            <a href="blog-post.html" class="portal-nav__item">Blog Post</a>
+            <a href="faq.html" class="portal-nav__item">FAQ</a>
+          </div>
+        </nav>
+      </div>
+      <a href="../index.html" class="portal-header__back">← Back to Hub</a>
+    </header>
+    <div class="portal-frame">
+      <div class="wf-page-container">
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header class="wf-header">
+      <div class="wf-menu-toggle" onclick="toggleMobileNav()">
+        <span class="wf-menu-toggle__bar"></span>
+        <span class="wf-menu-toggle__bar"></span>
+        <span class="wf-menu-toggle__bar"></span>
+      </div>
+      <a href="homepage.html" class="wf-header__logo">IQ LABS</a>
+      <nav class="wf-header__nav">
+        <div class="wf-nav-dropdown">
+          <span class="wf-nav-dropdown__trigger">Products</span>
+          <div class="wf-nav-dropdown__menu">
+            <a href="collections-list.html" class="wf-nav-dropdown__item">Shop All</a>
+            <a href="collection.html" class="wf-nav-dropdown__item">Laboratory Benches & Tables</a>
+            <a href="collection.html" class="wf-nav-dropdown__item">Pro-Line Laboratory Casework</a>
+            <a href="collection.html" class="wf-nav-dropdown__item">Laboratory Fume Hoods</a>
+            <a href="collection.html" class="wf-nav-dropdown__item">Laboratory Furniture Accessories</a>
+          </div>
+        </div>
+        <div class="wf-nav-dropdown">
+          <span class="wf-nav-dropdown__trigger">Projects</span>
+          <div class="wf-nav-dropdown__menu">
+            <a href="project-gallery.html" class="wf-nav-dropdown__item">Project Gallery</a>
+            <a href="how-we-work.html" class="wf-nav-dropdown__item">How We Work</a>
+          </div>
+        </div>
+        <a href="resources.html" class="wf-header__nav-item">Resources</a>
+        <a href="blog.html" class="wf-header__nav-item">Insights</a>
+        <div class="wf-nav-dropdown">
+          <span class="wf-nav-dropdown__trigger">About</span>
+          <div class="wf-nav-dropdown__menu">
+            <a href="about.html" class="wf-nav-dropdown__item">About IQ Labs</a>
+            <a href="manufacturing-quality.html" class="wf-nav-dropdown__item">Manufacturing & Quality</a>
+            <a href="certifications-standards.html" class="wf-nav-dropdown__item">Certifications & Standards</a>
+          </div>
+        </div>
+        <a href="contact.html" class="wf-header__nav-item">Contact</a>
+      </nav>
+      <div class="wf-header__actions">
+        <button class="wf-header__search-btn" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          </svg>
+        </button>
+        <a href="cart.html" class="wf-header__cart">
+          Cart
+          <span class="wf-badge">0</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="wf-mobile-nav" id="mobileNav">
+      <div class="wf-mobile-nav__overlay" onclick="toggleMobileNav()"></div>
+      <div class="wf-mobile-nav__panel">
+        <div class="wf-mobile-nav__header">
+          <span class="wf-header__logo">IQ LABS</span>
+          <button class="wf-mobile-nav__close" onclick="toggleMobileNav()">&times;</button>
+        </div>
+        <nav class="wf-mobile-nav__links">
+          <div class="wf-mobile-nav__group">
+            <span class="wf-mobile-nav__group-title">Products</span>
+            <div class="wf-mobile-nav__sublinks">
+              <a href="collections-list.html" class="wf-mobile-nav__sublink">Shop All</a>
+              <a href="collection.html" class="wf-mobile-nav__sublink">Laboratory Benches & Tables</a>
+              <a href="collection.html" class="wf-mobile-nav__sublink">Pro-Line Laboratory Casework</a>
+              <a href="collection.html" class="wf-mobile-nav__sublink">Laboratory Fume Hoods</a>
+              <a href="collection.html" class="wf-mobile-nav__sublink">Laboratory Furniture Accessories</a>
+            </div>
+          </div>
+          <div class="wf-mobile-nav__group">
+            <span class="wf-mobile-nav__group-title">Projects</span>
+            <div class="wf-mobile-nav__sublinks">
+              <a href="project-gallery.html" class="wf-mobile-nav__sublink">Project Gallery</a>
+              <a href="how-we-work.html" class="wf-mobile-nav__sublink">How We Work</a>
+            </div>
+          </div>
+          <a href="resources.html" class="wf-mobile-nav__link">Resources</a>
+          <a href="blog.html" class="wf-mobile-nav__link">Insights</a>
+          <div class="wf-mobile-nav__group">
+            <span class="wf-mobile-nav__group-title">About</span>
+            <div class="wf-mobile-nav__sublinks">
+              <a href="about.html" class="wf-mobile-nav__sublink">About IQ Labs</a>
+              <a href="manufacturing-quality.html" class="wf-mobile-nav__sublink">Manufacturing & Quality</a>
+              <a href="certifications-standards.html" class="wf-mobile-nav__sublink">Certifications & Standards</a>
+            </div>
+          </div>
+          <a href="contact.html" class="wf-mobile-nav__link">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ============================================
+         SECTION 1: HERO
+         ============================================ -->
+    <section class="wf-hero-split">
+      <div class="wf-hero-split__content">
+        <h1 class="wf-hero__title" style="text-align: left;">Innovative solutions for the modern laboratory.</h1>
+        <div class="wf-text-placeholder" style="margin: 0 0 var(--space-lg) 0; max-width: 500px;">
+          <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+          <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+          <div class="wf-text-placeholder__line wf-text-placeholder__line--md"></div>
+        </div>
+
+        <div class="wf-cta-row wf-mb-lg">
+          <a href="contact.html" class="wf-btn wf-btn--primary">Start a Project</a>
+          <a href="collections-list.html" class="wf-btn wf-btn--secondary">Browse Products</a>
+        </div>
+
+        <a href="resources.html" class="wf-link wf-link--arrow">Download Resources</a>
+      </div>
+      <div class="wf-hero-split__image">[Hero Image]</div>
+    </section>
+
+    <!-- Trust Strip -->
+    <div class="wf-trust-strip">
+      <div class="wf-trust-strip__item">
+        <div class="wf-trust-strip__value">68</div>
+        <div class="wf-trust-strip__label">Years of Manufacturing</div>
+      </div>
+      <div class="wf-trust-strip__item">
+        <div class="wf-trust-strip__value">6,000+</div>
+        <div class="wf-trust-strip__label">Labs Outfitted</div>
+      </div>
+      <div class="wf-trust-strip__item">
+        <div class="wf-trust-strip__value">50</div>
+        <div class="wf-trust-strip__label">States Served</div>
+      </div>
+    </div>
+
+    <!-- ============================================
+         SECTION 2: WHAT YOU CAN EXPECT
+         ============================================ -->
+    <section class="wf-section">
+      <div class="wf-container">
+        <div class="wf-section-header">
+          <h2 class="wf-section-header__title">What you can expect from IQ Labs</h2>
+        </div>
+
+        <div class="wf-blurb-row">
+          <div class="wf-icon-card">
+            <div class="wf-icon-card__icon">[Doc]</div>
+            <div class="wf-icon-card__title">Quote-ready documentation</div>
+            <div class="wf-text-placeholder wf-text-placeholder--sm wf-text-placeholder--center">
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--lg"></div>
+            </div>
+          </div>
+          <div class="wf-icon-card">
+            <div class="wf-icon-card__icon">[List]</div>
+            <div class="wf-icon-card__title">Clear next steps</div>
+            <div class="wf-text-placeholder wf-text-placeholder--sm wf-text-placeholder--center">
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--lg"></div>
+            </div>
+          </div>
+          <div class="wf-icon-card">
+            <div class="wf-icon-card__icon">[User]</div>
+            <div class="wf-icon-card__title">Direct-to-customer accountability</div>
+            <div class="wf-text-placeholder wf-text-placeholder--sm wf-text-placeholder--center">
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--lg"></div>
+            </div>
+          </div>
+          <div class="wf-icon-card">
+            <div class="wf-icon-card__icon">[Cal]</div>
+            <div class="wf-icon-card__title">Lead time confirmed with your scope</div>
+            <div class="wf-text-placeholder wf-text-placeholder--sm wf-text-placeholder--center">
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--lg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 3: START IN THE RIGHT PLACE
+         ============================================ -->
+    <section class="wf-section wf-section--accent">
+      <div class="wf-container">
+        <div class="wf-section-header">
+          <h2 class="wf-section-header__title">Start in the right place</h2>
+          <div class="wf-text-placeholder wf-text-placeholder--sm wf-text-placeholder--center" style="max-width: 500px; margin: 0 auto var(--space-lg) auto;">
+            <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+            <div class="wf-text-placeholder__line wf-text-placeholder__line--md"></div>
+          </div>
+        </div>
+
+        <div class="wf-grid wf-grid--3col">
+          <div class="wf-guided-card">
+            <div class="wf-guided-card__title">I know what I need</div>
+            <div class="wf-text-placeholder wf-text-placeholder--sm">
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--md"></div>
+            </div>
+            <a href="collections-list.html" class="wf-link wf-link--arrow">Browse Products</a>
+          </div>
+
+          <div class="wf-guided-card">
+            <div class="wf-guided-card__title">I'm planning a project or need guidance</div>
+            <div class="wf-text-placeholder wf-text-placeholder--sm">
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--md"></div>
+            </div>
+            <a href="contact.html" class="wf-link wf-link--arrow">Start a Project</a>
+          </div>
+
+          <div class="wf-guided-card">
+            <div class="wf-guided-card__title">I need CAD, cut sheets, or manuals</div>
+            <div class="wf-text-placeholder wf-text-placeholder--sm">
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--md"></div>
+            </div>
+            <a href="resources.html" class="wf-link wf-link--arrow">Go to Resources</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 4: BROWSE PRODUCTS
+         ============================================ -->
+    <section class="wf-section">
+      <div class="wf-container">
+        <div class="wf-section-header">
+          <h2 class="wf-section-header__title">Browse products by category</h2>
+          <div class="wf-text-placeholder wf-text-placeholder--sm wf-text-placeholder--center" style="max-width: 500px; margin: 0 auto var(--space-lg) auto;">
+            <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+            <div class="wf-text-placeholder__line wf-text-placeholder__line--md"></div>
+          </div>
+
+        </div>
+
+        <div class="wf-grid wf-grid--3col">
+          <a href="collection.html" class="wf-product-tile">
+            <div class="wf-product-tile__image">[Image: Casework installation]</div>
+            <div class="wf-product-tile__body">
+              <div class="wf-product-tile__title">Casework & Cabinets</div>
+              <div class="wf-text-placeholder wf-text-placeholder--sm">
+                <div class="wf-text-placeholder__line wf-text-placeholder__line--lg"></div>
+              </div>
+            </div>
+          </a>
+
+          <a href="collection.html" class="wf-product-tile">
+            <div class="wf-product-tile__image">[Image: Lab tables and benches]</div>
+            <div class="wf-product-tile__body">
+              <div class="wf-product-tile__title">Tables & Benches</div>
+              <div class="wf-text-placeholder wf-text-placeholder--sm">
+                <div class="wf-text-placeholder__line wf-text-placeholder__line--lg"></div>
+              </div>
+            </div>
+          </a>
+
+          <a href="collection.html" class="wf-product-tile">
+            <div class="wf-product-tile__image">[Image: Fume hood installation]</div>
+            <div class="wf-product-tile__body">
+              <div class="wf-product-tile__title">Fume Hoods</div>
+              <div class="wf-text-placeholder wf-text-placeholder--sm">
+                <div class="wf-text-placeholder__line wf-text-placeholder__line--lg"></div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 5: HOW WE WORK
+         ============================================ -->
+    <section class="wf-section wf-section--accent">
+      <div class="wf-container">
+        <div class="wf-text-section">
+          <h2 class="wf-section-header__title">How we work</h2>
+          <div class="wf-text-placeholder wf-text-placeholder--sm wf-text-placeholder--center" style="max-width: 500px; margin: 0 auto var(--space-lg) auto;">
+            <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+            <div class="wf-text-placeholder__line wf-text-placeholder__line--md"></div>
+          </div>
+
+          <div class="wf-timeline">
+            <div class="wf-timeline__step wf-timeline__step--active">
+              <div class="wf-timeline__number">1</div>
+              <span class="wf-timeline__label">Confirm</span>
+            </div>
+            <div class="wf-timeline__connector"></div>
+            <div class="wf-timeline__step">
+              <div class="wf-timeline__number">2</div>
+              <span class="wf-timeline__label">Quote</span>
+            </div>
+            <div class="wf-timeline__connector"></div>
+            <div class="wf-timeline__step">
+              <div class="wf-timeline__number">3</div>
+              <span class="wf-timeline__label">Build & Ship</span>
+            </div>
+          </div>
+
+          <a href="how-we-work.html" class="wf-link wf-link--arrow">Read the full process</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 6: PROJECTS AND INSTALLATIONS
+         ============================================ -->
+    <section class="wf-section">
+      <div class="wf-container">
+        <div class="wf-section-header">
+          <h2 class="wf-section-header__title">Projects and installations</h2>
+          <div class="wf-text-placeholder wf-text-placeholder--sm wf-text-placeholder--center" style="max-width: 500px; margin: 0 auto var(--space-lg) auto;">
+            <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+            <div class="wf-text-placeholder__line wf-text-placeholder__line--md"></div>
+          </div>
+        </div>
+
+        <div class="wf-filter-tags wf-mb-lg" style="justify-content: center;">
+          <span class="wf-filter-tag wf-filter-tag--active">All</span>
+          <span class="wf-filter-tag">Teaching</span>
+          <span class="wf-filter-tag">Research</span>
+          <span class="wf-filter-tag">QC</span>
+          <span class="wf-filter-tag">Fume Hoods</span>
+          <span class="wf-filter-tag">Casework</span>
+          <span class="wf-filter-tag">Benches</span>
+        </div>
+
+        <div class="wf-image-grid wf-mb-xl">
+          <div class="wf-image-grid__item">[Image]</div>
+          <div class="wf-image-grid__item">[Image]</div>
+          <div class="wf-image-grid__item">[Image]</div>
+          <div class="wf-image-grid__item">[Image]</div>
+          <div class="wf-image-grid__item">[Image]</div>
+          <div class="wf-image-grid__item">[Image]</div>
+        </div>
+
+        <div class="wf-text-center">
+          <a href="project-gallery.html" class="wf-btn wf-btn--secondary">View Project Gallery</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 7: TESTIMONIALS
+         ============================================ -->
+    <section class="wf-section wf-section--accent">
+      <div class="wf-container">
+        <div class="wf-section-header">
+          <h2 class="wf-section-header__title">What customers say</h2>
+        </div>
+
+        <div class="wf-grid wf-grid--3col">
+          <div class="wf-testimonial">
+            <div class="wf-testimonial__quote">"</div>
+            <div class="wf-text-placeholder wf-text-placeholder--sm">
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--sm"></div>
+            </div>
+            <div class="wf-testimonial__author">Facilities Director</div>
+            <div class="wf-testimonial__role">State University</div>
+          </div>
+
+          <div class="wf-testimonial">
+            <div class="wf-testimonial__quote">"</div>
+            <div class="wf-text-placeholder wf-text-placeholder--sm">
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--sm"></div>
+            </div>
+            <div class="wf-testimonial__author">Lab Manager</div>
+            <div class="wf-testimonial__role">Research Institute</div>
+          </div>
+
+          <div class="wf-testimonial">
+            <div class="wf-testimonial__quote">"</div>
+            <div class="wf-text-placeholder wf-text-placeholder--sm">
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--sm"></div>
+            </div>
+            <div class="wf-testimonial__author">Operations Manager</div>
+            <div class="wf-testimonial__role">Industrial Lab</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 8: TRUSTED BY LABS NATIONWIDE
+         ============================================ -->
+    <section class="wf-section">
+      <div class="wf-container">
+        <div class="wf-section-header">
+          <h2 class="wf-section-header__title">Trusted by labs nationwide</h2>
+        </div>
+
+        <div class="wf-logo-row">
+          <div class="wf-logo-row__item">Logo 1</div>
+          <div class="wf-logo-row__item">Logo 2</div>
+          <div class="wf-logo-row__item">Logo 3</div>
+          <div class="wf-logo-row__item">Logo 4</div>
+          <div class="wf-logo-row__item">Logo 5</div>
+          <div class="wf-logo-row__item">Logo 6</div>
+          <div class="wf-logo-row__item">Logo 7</div>
+          <div class="wf-logo-row__item">Logo 8</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 9: INSIGHTS
+         ============================================ -->
+    <section class="wf-section wf-section--accent">
+      <div class="wf-container">
+        <div class="wf-section-header">
+          <h2 class="wf-section-header__title">Insights</h2>
+        </div>
+
+        <div class="wf-grid wf-grid--3col wf-mb-lg">
+          <a href="blog-post.html" class="wf-article-card">
+            <div class="wf-article-card__image">[Article thumbnail]</div>
+            <div class="wf-article-card__body">
+              <div class="wf-article-card__title">Steel Laboratory Casework & Other Lab Furniture Materials</div>
+              <div class="wf-text-placeholder wf-text-placeholder--sm">
+                <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+                <div class="wf-text-placeholder__line wf-text-placeholder__line--lg"></div>
+              </div>
+            </div>
+          </a>
+
+          <a href="blog-post.html" class="wf-article-card">
+            <div class="wf-article-card__image">[Article thumbnail]</div>
+            <div class="wf-article-card__body">
+              <div class="wf-article-card__title">Improving Laboratory Efficiency: A Guide to Laboratory Work Benches</div>
+              <div class="wf-text-placeholder wf-text-placeholder--sm">
+                <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+                <div class="wf-text-placeholder__line wf-text-placeholder__line--lg"></div>
+              </div>
+            </div>
+          </a>
+
+          <a href="blog-post.html" class="wf-article-card">
+            <div class="wf-article-card__image">[Article thumbnail]</div>
+            <div class="wf-article-card__body">
+              <div class="wf-article-card__title">What to Look for in a Laboratory Fume Hood Manufacturer</div>
+              <div class="wf-text-placeholder wf-text-placeholder--sm">
+                <div class="wf-text-placeholder__line wf-text-placeholder__line--full"></div>
+                <div class="wf-text-placeholder__line wf-text-placeholder__line--lg"></div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="wf-text-center">
+          <a href="blog.html" class="wf-link wf-link--arrow">View all Insights</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 10: FINAL CTA BAND
+         ============================================ -->
+         <section class="wf-cta-band">
+          <div class="wf-container">
+            <h2 class="wf-cta-band__title">CTA Headline</h2>
+            <div class="wf-text-placeholder wf-text-placeholder--sm wf-text-placeholder--center" style="max-width: 400px; margin: 0 auto;">
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--full" style="background: rgba(255,255,255,0.3);"></div>
+              <div class="wf-text-placeholder__line wf-text-placeholder__line--lg" style="background: rgba(255,255,255,0.3);"></div>
+            </div>
+            <div class="wf-cta-row wf-mt-lg" style="justify-content: center;">
+              <a href="contact.html" class="wf-btn wf-btn--primary">Primary CTA</a>
+              <a href="collections-list.html" class="wf-btn wf-btn--secondary" style="background: transparent; border-color: var(--white); color: var(--white);">Secondary CTA</a>
+            </div>
+          </div>
+        </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="wf-footer">
+      <div class="wf-footer__grid">
+        <div class="wf-footer__column">
+          <div class="wf-footer__column-title">Contact</div>
+          <span class="wf-footer__text">616-583-8876</span>
+          <span class="wf-footer__text">sales@iq-laboratory.com</span>
+          <span class="wf-footer__text">Grand Rapids, MI</span>
+        </div>
+        <div class="wf-footer__column">
+          <div class="wf-footer__column-title">Get Started</div>
+          <a href="collections-list.html" class="wf-footer__link">Browse Products</a>
+          <a href="about.html" class="wf-footer__link">About IQ Labs</a>
+          <a href="resources.html" class="wf-footer__link">Resources</a>
+          <a href="project-gallery.html" class="wf-footer__link">Project Gallery</a>
+        </div>
+        <div class="wf-footer__column">
+          <div class="wf-footer__column-title">Products</div>
+          <a href="collection.html" class="wf-footer__link">Fume Hoods</a>
+          <a href="collection.html" class="wf-footer__link">Casework & Cabinets</a>
+          <a href="collection.html" class="wf-footer__link">Benches & Tables</a>
+          <a href="collection.html" class="wf-footer__link">Accessories</a>
+        </div>
+        <div class="wf-footer__column">
+          <div class="wf-footer__column-title">Support</div>
+          <a href="how-we-work.html" class="wf-footer__link">How We Work</a>
+          <a href="faq.html" class="wf-footer__link">FAQs</a>
+        </div>
+      </div>
+      <div class="wf-footer__bottom">
+        <span>&copy; 2026 IQ Labs. All rights reserved.</span>
+        <span>Privacy Policy | Terms & Conditions | Accessibility Statement</span>
+      </div>
+    </footer>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobileNav() {
+      const mobileNav = document.getElementById('mobileNav');
+      const menuToggle = document.querySelector('.wf-menu-toggle');
+      mobileNav.classList.toggle('wf-mobile-nav--open');
+      menuToggle.classList.toggle('wf-menu-toggle--open');
+    }
+  </script>
+</body>
+</html>
