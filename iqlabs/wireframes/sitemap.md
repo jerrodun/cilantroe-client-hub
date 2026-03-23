@@ -1,4 +1,4 @@
-# IQ Labs — Phase 1 Sitemap
+# iQ Labs — Phase 1 Sitemap
 
 ## Navigation Depth Rule
 
@@ -71,7 +71,7 @@ Blog with filters by product type and article category. Level 2 pages are indivi
 
 | Page | Notes |
 |---|---|
-| About IQ Labs | Primary about page |
+| About iQ Labs | Primary about page |
 | Manufacturing & Quality | [NEEDS CLARIFICATION] Include only if enough content is available |
 | Certifications | |
 

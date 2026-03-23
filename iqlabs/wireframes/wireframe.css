@@ -1,5 +1,5 @@
 /**
- * IQ Labs Wireframe Component Library
+ * iQ Labs Wireframe Component Library
  * Clean geometric wireframe styles for desktop and mobile
  */
 
@@ -4036,7 +4036,7 @@ a {
   z-index: 0;
 }
 
-/* Process Step Columns (for how-we-work style with You/IQ Labs/You Get) */
+/* Process Step Columns (for how-we-work style with You/iQ Labs/You Get) */
 .wf-process-step__columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
