@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quotes Confirmed - iQ Labs Wireframe</title>
+  <link rel="stylesheet" href="../wireframe.css">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <style>
+    /* Shopify Account Page Specific Styles */
+    .wf-account-page {
+      min-height: 100vh;
+      background: var(--gray-100);
+    }
+
+    /* Account Header */
+    .wf-account-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: var(--space-md) var(--space-xl);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .wf-account-header__left {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xl);
+    }
+
+    .wf-account-header__nav {
+      display: flex;
+      gap: var(--space-lg);
+    }
+
+    .wf-account-header__nav-link {
+      font-size: var(--text-sm);
+      color: var(--gray-700);
+      text-decoration: none;
+    }
+
+    .wf-account-header__nav-link--active {
+      text-decoration: underline;
+    }
+
+    .wf-account-header__right {
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+    }
+
+    .wf-account-header__address {
+      font-size: var(--text-sm);
+      color: var(--gray-700);
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    .wf-account-header__user {
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--gray-300);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wf-account-header__user svg {
+      width: 18px;
+      height: 18px;
+      color: var(--gray-500);
+    }
+
+    /* Account Content */
+    .wf-account-content {
+      padding: var(--space-xl);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Page Title Row */
+    .wf-account-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--space-xl);
+    }
+
+    @media (max-width: 768px) {
+      .wf-account-title-row {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: var(--space-md);;
+      }
+    }
+
+    .wf-account-title {
+      font-size: var(--text-2xl);
+      font-weight: 600;
+      color: var(--gray-800);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .wf-account-title svg {
+      width: 16px;
+      height: 16px;
+      color: var(--gray-500);
+    }
+
+    .wf-account-title-row__right {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .wf-view-toggle {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      font-size: var(--text-sm);
+      color: var(--gray-700);
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-md);
+      padding: var(--space-sm) var(--space-md);
+      background: var(--white);
+    }
+
+    .wf-view-toggle svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .wf-sort-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-md);
+      background: var(--white);
+    }
+
+    .wf-sort-toggle svg {
+      width: 16px;
+      height: 16px;
+      color: var(--gray-500);
+    }
+
+    /* Quote Cards Grid */
+    .wf-quote-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--space-lg);
+    }
+
+    /* Quote Card */
+    .wf-quote-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .wf-quote-card__status {
+      padding: var(--space-md);
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-sm);
+      background: var(--gray-100);
+      border-radius: var(--radius-md);
+      margin: var(--space-md);
+    }
+
+    .wf-quote-card__status-icon {
+      width: 20px;
+      height: 20px;
+      color: var(--gray-500);
+      flex-shrink: 0;
+    }
+
+    .wf-quote-card__status-text {
+      font-size: var(--text-sm);
+      font-weight: 500;
+      color: var(--gray-800);
+    }
+
+    .wf-quote-card__status-date {
+      font-size: var(--text-sm);
+      color: var(--gray-500);
+    }
+
+    .wf-quote-card__image {
+      aspect-ratio: 4/3;
+      background: var(--gray-200);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray-400);
+      font-size: var(--text-sm);
+      margin: 0 var(--space-md);
+      border-radius: var(--radius-md);
+    }
+
+    .wf-quote-card__body {
+      padding: var(--space-md);
+    }
+
+    .wf-quote-card__items {
+      font-size: var(--text-sm);
+      font-weight: 500;
+      color: var(--gray-800);
+    }
+
+    .wf-quote-card__number {
+      font-size: var(--text-sm);
+      color: var(--gray-500);
+      margin-bottom: var(--space-sm);
+    }
+
+    .wf-quote-card__address {
+      font-size: var(--text-sm);
+      color: var(--gray-700);
+      margin-bottom: var(--space-md);
+    }
+
+    .wf-quote-card__price {
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-bottom: var(--space-md);
+    }
+
+    .wf-quote-card__action {
+      width: 100%;
+      text-align: center;
+      padding: var(--space-md);
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-md);
+      background: var(--white);
+      font-size: var(--text-sm);
+      color: var(--gray-700);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="portal-wrapper">
+    <header class="portal-header">
+      <div class="portal-header__left">
+        <img src="../assets/cilantroe.png" alt="Cilantroe" class="portal-header__logo">
+        <span class="portal-header__divider"></span>
+        <nav class="portal-nav">
+          <span class="portal-nav__trigger">
+            Account Quotes Confirmed
+            <svg class="portal-nav__chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+          <div class="portal-nav__menu">
+            <a href="homepage.html" class="portal-nav__item">Homepage</a>
+            <a href="collections-list.html" class="portal-nav__item">Collections List</a>
+            <a href="collection.html" class="portal-nav__item">Collection Page</a>
+            <a href="product-display-page.html" class="portal-nav__item">Product Display Page</a>
+            <a href="cart.html" class="portal-nav__item">Quote Cart</a>
+            <a href="cart-drawer.html" class="portal-nav__item">Cart Drawer</a>
+            <a href="contact.html" class="portal-nav__item">Contact</a>
+            <a href="about.html" class="portal-nav__item">About</a>
+            <a href="how-we-work.html" class="portal-nav__item">How We Work</a>
+            <a href="project-gallery.html" class="portal-nav__item">Project Gallery</a>
+            <a href="case-study.html" class="portal-nav__item">Case Study</a>
+            <a href="manufacturing-quality.html" class="portal-nav__item">Manufacturing & Quality</a>
+            <a href="certifications-standards.html" class="portal-nav__item">Certifications & Standards</a>
+            <a href="resources.html" class="portal-nav__item">Resources</a>
+            <a href="blog.html" class="portal-nav__item">Blog / Blog</a>
+            <a href="blog-post.html" class="portal-nav__item">Blog Post</a>
+            <a href="faq.html" class="portal-nav__item">FAQ</a>
+            <a href="account-login.html" class="portal-nav__item">Account Login</a>
+            <a href="account-quotes.html" class="portal-nav__item">Account Quotes</a>
+            <a href="account-quotes-confirmed.html" class="portal-nav__item portal-nav__item--active">Account Quotes Confirmed</a>
+          </div>
+        </nav>
+      </div>
+      <a href="../index.html" class="portal-header__back">← Back to Hub</a>
+    </header>
+    <div class="portal-frame">
+
+      <!-- ============================================
+           SHOPIFY ACCOUNT - QUOTES CONFIRMED PAGE
+           Note: This is Shopify's customer account.
+           Limited customization available in production.
+           ============================================ -->
+      <div class="wf-account-page">
+
+        <!-- Account Header -->
+        <header class="wf-account-header">
+          <div class="wf-account-header__left">
+            <span class="wf-header__logo">iQ Labs</span>
+            <nav class="wf-account-header__nav">
+              <a href="account-quotes.html" class="wf-account-header__nav-link wf-account-header__nav-link--active">Quotes</a>
+              <a href="#" class="wf-account-header__nav-link">Profile</a>
+            </nav>
+          </div>
+          <div class="wf-account-header__right">
+            <span class="wf-account-header__address">
+              123 Main Street
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="12" height="12">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+            <span class="wf-account-header__user">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0" />
+              </svg>
+            </span>
+          </div>
+        </header>
+
+        <!-- Content -->
+        <div class="wf-account-content">
+
+          <!-- Title Row -->
+          <div class="wf-account-title-row">
+            <h1 class="wf-account-title">
+              Quotes: Confirmed
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </h1>
+            <div class="wf-account-title-row__right">
+              <button class="wf-view-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+                </svg>
+                Gallery
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="12" height="12">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <button class="wf-sort-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Quote Cards Grid -->
+          <div class="wf-quote-cards">
+
+            <!-- Quote Card 1 - On its way -->
+            <div class="wf-quote-card">
+              <div class="wf-quote-card__status">
+                <svg class="wf-quote-card__status-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                </svg>
+                <div>
+                  <div class="wf-quote-card__status-text">On its way</div>
+                  <div class="wf-quote-card__status-date">Mar 24, 2026</div>
+                </div>
+              </div>
+              <div class="wf-quote-card__image">[Image]</div>
+              <div class="wf-quote-card__body">
+                <div class="wf-quote-card__items">10 items</div>
+                <div class="wf-quote-card__number">Quote #1014</div>
+                <div class="wf-quote-card__address">123 Main Street</div>
+                <div class="wf-quote-card__price">$73.50</div>
+                <button class="wf-quote-card__action">Order again</button>
+              </div>
+            </div>
+
+            <!-- Quote Card 2 - Confirmed -->
+            <div class="wf-quote-card">
+              <div class="wf-quote-card__status">
+                <svg class="wf-quote-card__status-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                <div>
+                  <div class="wf-quote-card__status-text">Confirmed</div>
+                  <div class="wf-quote-card__status-date">Mar 15, 2026</div>
+                </div>
+              </div>
+              <div class="wf-quote-card__image">[Image]</div>
+              <div class="wf-quote-card__body">
+                <div class="wf-quote-card__items">3 items</div>
+                <div class="wf-quote-card__number">Quote #1012</div>
+                <div class="wf-quote-card__address">123 Main Street</div>
+                <div class="wf-quote-card__price">$0.00</div>
+                <button class="wf-quote-card__action">Order again</button>
+              </div>
+            </div>
+
+            <!-- Quote Card 3 - Confirmed -->
+            <div class="wf-quote-card">
+              <div class="wf-quote-card__status">
+                <svg class="wf-quote-card__status-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                <div>
+                  <div class="wf-quote-card__status-text">Confirmed</div>
+                  <div class="wf-quote-card__status-date">Mar 8, 2026</div>
+                </div>
+              </div>
+              <div class="wf-quote-card__image">[Image]</div>
+              <div class="wf-quote-card__body">
+                <div class="wf-quote-card__items">1 item</div>
+                <div class="wf-quote-card__number">Quote #1011</div>
+                <div class="wf-quote-card__address">123 Main Street</div>
+                <div class="wf-quote-card__price">$0.00</div>
+                <button class="wf-quote-card__action">Order again</button>
+              </div>
+            </div>
+
+            <!-- Quote Card 4 - Delivered -->
+            <div class="wf-quote-card">
+              <div class="wf-quote-card__status">
+                <svg class="wf-quote-card__status-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <div class="wf-quote-card__status-text">Delivered</div>
+                  <div class="wf-quote-card__status-date">Mar 1, 2026</div>
+                </div>
+              </div>
+              <div class="wf-quote-card__image">[Image]</div>
+              <div class="wf-quote-card__body">
+                <div class="wf-quote-card__items">5 items</div>
+                <div class="wf-quote-card__number">Quote #1008</div>
+                <div class="wf-quote-card__address">123 Main Street</div>
+                <div class="wf-quote-card__price">$2,450.00</div>
+                <button class="wf-quote-card__action">Order again</button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
