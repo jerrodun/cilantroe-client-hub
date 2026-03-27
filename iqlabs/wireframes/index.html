@@ -214,6 +214,65 @@
       height: 16px;
     }
 
+    /* Multi-link card */
+    .hub-card--multi {
+      cursor: default;
+    }
+
+    .hub-card--multi:hover {
+      border-color: var(--gray-200);
+      box-shadow: none;
+    }
+
+    .hub-card__link-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .hub-card__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    .hub-card__link:hover {
+      color: var(--teal-light);
+    }
+
+    .hub-card__link svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .hub-card__new-badge {
+      display: inline-block;
+      background: #00d4aa;
+      color: #003d32;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-left: 4px;
+      box-shadow: 0 0 10px rgba(0, 212, 170, 0.6);
+      animation: badge-pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes badge-pulse {
+      0%, 100% {
+        box-shadow: 0 0 10px rgba(0, 212, 170, 0.6);
+      }
+      50% {
+        box-shadow: 0 0 16px rgba(0, 212, 170, 0.8);
+      }
+    }
+
     /* Page Index Section */
     .hub-index {
       background: var(--white);
@@ -297,19 +356,28 @@
     <section class="hub-cards">
 
       <!-- Card: Interactive Prototype -->
-      <a href="pages/homepage.html" target="_blank" rel="noopener" class="hub-card">
+      <div class="hub-card hub-card--multi">
         <img src="assets/logo-wireframe.svg" alt="" class="hub-card__icon">
         <h2 class="hub-card__title">Interactive Prototype</h2>
         <p class="hub-card__desc">
           Browse and interact with the site wireframes across desktop and mobile.
         </p>
-        <span class="hub-card__cta">
-          Launch Prototype
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </span>
-      </a>
+        <div class="hub-card__link-list">
+          <a href="v2/pages/homepage.html" target="_blank" rel="noopener" class="hub-card__link">
+            Launch V2 Prototype
+            <span class="hub-card__new-badge">New</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+          <a href="v1/pages/homepage.html" target="_blank" rel="noopener" class="hub-card__link">
+            Launch V1 Prototype
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+      </div>
 
       <!-- Card: User Flows -->
       <a href="https://www.figma.com/board/w6vQy9mpm7qwZdFwNkXFwn/User-Flow?node-id=0-1&t=T3Ry6tLyfv047117-1" target="_blank" rel="noopener" class="hub-card">
@@ -327,19 +395,28 @@
       </a>
 
       <!-- Card: Figma Source File -->
-      <a href="https://www.figma.com/design/D1Ua0kJKF7MVDiSjjVFqjf/Wireframes?node-id=0-1&t=I6NknpcuzYBTdsqX-1" target="_blank" rel="noopener" class="hub-card">
+      <div class="hub-card hub-card--multi">
         <img src="assets/logo-figma.svg" alt="" class="hub-card__icon">
         <h2 class="hub-card__title">Figma Source File</h2>
         <p class="hub-card__desc">
           View the original design file with all frames and components. Leave comments and feedback directly on any element.
         </p>
-        <span class="hub-card__cta">
-          Open in Figma
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-        </span>
-      </a>
+        <div class="hub-card__link-list">
+          <a href="https://www.figma.com/design/D1Ua0kJKF7MVDiSjjVFqjf/Wireframes?node-id=230-3&t=et2fhaCpUMCqI9SC-0" target="_blank" rel="noopener" class="hub-card__link">
+            Open V2 in Figma
+            <span class="hub-card__new-badge">New</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+          <a href="https://www.figma.com/design/D1Ua0kJKF7MVDiSjjVFqjf/Wireframes?node-id=0-1&t=I6NknpcuzYBTdsqX-1" target="_blank" rel="noopener" class="hub-card__link">
+            Open V1 in Figma
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+      </div>
 
       <!-- Card: PDF Exports -->
       <a href="https://drive.google.com/drive/folders/19__9fo0QH_MHRQGQfTmK9W-1qJvzUheq?usp=sharing" target="_blank" rel="noopener" class="hub-card">
