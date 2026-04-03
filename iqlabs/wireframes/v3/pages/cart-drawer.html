@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Drawer - iQ Labs Wireframe</title>
+  <link rel="stylesheet" href="../wireframe.css">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+  <div class="portal-wrapper">
+    <header class="portal-header">
+      <div class="portal-header__left">
+        <img src="../assets/cilantroe.png" alt="Cilantroe" class="portal-header__logo">
+        <span class="portal-header__divider"></span>
+        <nav class="portal-nav">
+          <span class="portal-nav__trigger">
+            Cart Drawer
+            <svg class="portal-nav__chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+          <div class="portal-nav__menu">
+            <a href="homepage.html" class="portal-nav__item">Homepage</a>
+            <a href="collections-list.html" class="portal-nav__item">Collections List</a>
+            <a href="collection.html" class="portal-nav__item">Collection Page</a>
+            <a href="product-display-page.html" class="portal-nav__item">Product Display Page</a>
+            <a href="cart.html" class="portal-nav__item">Quote Cart</a>
+            <a href="cart-drawer.html" class="portal-nav__item portal-nav__item--active">Cart Drawer</a>
+            <a href="contact.html" class="portal-nav__item">Contact</a>
+            <a href="about.html" class="portal-nav__item">About</a>
+            <a href="how-we-work.html" class="portal-nav__item">How We Work</a>
+            <a href="project-gallery.html" class="portal-nav__item">Project Gallery</a>
+            <a href="case-study.html" class="portal-nav__item">Case Study</a>
+            <a href="manufacturing-quality.html" class="portal-nav__item">Manufacturing & Quality</a>
+            <a href="certifications-standards.html" class="portal-nav__item">Certifications & Standards</a>
+            <a href="resources.html" class="portal-nav__item">Resources</a>
+            <a href="blog.html" class="portal-nav__item">Blog / Blog</a>
+            <a href="blog-post.html" class="portal-nav__item">Blog Post</a>
+            <a href="faq.html" class="portal-nav__item">FAQ</a>
+          </div>
+        </nav>
+      </div>
+      <a href="../../index.html" class="portal-header__back">← Back to Hub</a>
+    </header>
+    <div class="portal-frame">
+      <div class="wf-page-container">
+
+    <!-- ============================================
+         HEADER (Context - showing cart trigger)
+         ============================================ -->
+    <header class="wf-header">
+      <div class="wf-menu-toggle" onclick="toggleMobileNav()">
+        <span class="wf-menu-toggle__bar"></span>
+        <span class="wf-menu-toggle__bar"></span>
+        <span class="wf-menu-toggle__bar"></span>
+      </div>
+      <a href="homepage.html" class="wf-header__logo">iQ Labs</a>
+      <nav class="wf-header__nav">
+        <div class="wf-nav-dropdown">
+          <span class="wf-nav-dropdown__trigger">
+            Products
+            <svg class="wf-nav-dropdown__chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+          <div class="wf-nav-dropdown__menu">
+            <a href="shop-all.html" class="wf-nav-dropdown__item">Browse All</a>
+            <a href="collection.html" class="wf-nav-dropdown__item">Fume Hoods</a>
+            <a href="collection.html" class="wf-nav-dropdown__item">Tables & Benches</a>
+            <a href="collection.html" class="wf-nav-dropdown__item">Base Cabinets</a>
+            <a href="collection.html" class="wf-nav-dropdown__item">Specialty Cabinets</a>
+            <a href="collection.html" class="wf-nav-dropdown__item">Worksurfaces</a>
+            <a href="collection.html" class="wf-nav-dropdown__item">Accessories</a>
+          </div>
+        </div>
+        <div class="wf-nav-dropdown">
+          <span class="wf-nav-dropdown__trigger">
+            Projects
+            <svg class="wf-nav-dropdown__chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+          <div class="wf-nav-dropdown__menu">
+            <a href="project-gallery.html" class="wf-nav-dropdown__item">Project Gallery</a>
+            <a href="how-we-work.html" class="wf-nav-dropdown__item">How We Work</a>
+          </div>
+        </div>
+        <a href="resources.html" class="wf-header__nav-item">Resources</a>
+        <a href="blog.html" class="wf-header__nav-item">Blog</a>
+        <div class="wf-nav-dropdown">
+          <span class="wf-nav-dropdown__trigger">
+            About
+            <svg class="wf-nav-dropdown__chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+          <div class="wf-nav-dropdown__menu">
+            <a href="about.html" class="wf-nav-dropdown__item">About iQ Labs</a>
+            <a href="manufacturing-quality.html" class="wf-nav-dropdown__item">Manufacturing & Quality</a>
+            <a href="certifications-standards.html" class="wf-nav-dropdown__item">Certifications & Standards</a>
+          </div>
+        </div>
+        <a href="contact.html" class="wf-header__nav-item">Contact</a>
+      </nav>
+      <div class="wf-header__actions">
+        <div class="wf-header__search">
+          <input type="text" class="wf-header__search-input" placeholder="Search products..." aria-label="Search">
+          <button class="wf-header__search-btn" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+          </button>
+        </div>
+        <a href="account-profile.html" class="wf-header__nav-item wf-header__account">Account</a>
+        <a href="cart.html" class="wf-header__cart">
+          Quote
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+          </svg>
+          <span class="wf-badge">0</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="wf-mobile-nav" id="mobileNav">
+      <div class="wf-mobile-nav__overlay" onclick="toggleMobileNav()"></div>
+      <div class="wf-mobile-nav__panel">
+        <div class="wf-mobile-nav__header">
+          <span class="wf-header__logo">iQ Labs</span>
+          <button class="wf-mobile-nav__close" onclick="toggleMobileNav()">&times;</button>
+        </div>
+        <nav class="wf-mobile-nav__links">
+          <div class="wf-mobile-nav__group">
+            <span class="wf-mobile-nav__group-title">Products</span>
+            <div class="wf-mobile-nav__sublinks">
+              <a href="shop-all.html" class="wf-mobile-nav__sublink">Browse All</a>
+              <a href="collection.html" class="wf-mobile-nav__sublink">Fume Hoods</a>
+              <a href="collection.html" class="wf-mobile-nav__sublink">Tables & Benches</a>
+              <a href="collection.html" class="wf-mobile-nav__sublink">Base Cabinets</a>
+              <a href="collection.html" class="wf-mobile-nav__sublink">Specialty Cabinets</a>
+              <a href="collection.html" class="wf-mobile-nav__sublink">Worksurfaces</a>
+              <a href="collection.html" class="wf-mobile-nav__sublink">Accessories</a>
+            </div>
+          </div>
+          <div class="wf-mobile-nav__group">
+            <span class="wf-mobile-nav__group-title">Projects</span>
+            <div class="wf-mobile-nav__sublinks">
+              <a href="project-gallery.html" class="wf-mobile-nav__sublink">Project Gallery</a>
+              <a href="how-we-work.html" class="wf-mobile-nav__sublink">How We Work</a>
+            </div>
+          </div>
+          <div class="wf-mobile-nav__group">
+            <span class="wf-mobile-nav__group-title">About</span>
+            <div class="wf-mobile-nav__sublinks">
+              <a href="about.html" class="wf-mobile-nav__sublink">About iQ Labs</a>
+              <a href="manufacturing-quality.html" class="wf-mobile-nav__sublink">Manufacturing & Quality</a>
+              <a href="certifications-standards.html" class="wf-mobile-nav__sublink">Certifications & Standards</a>
+            </div>
+          </div>
+          <a href="resources.html" class="wf-mobile-nav__link">Resources</a>
+          <a href="blog.html" class="wf-mobile-nav__link">Blog</a>
+          <a href="contact.html" class="wf-mobile-nav__link">Contact</a>
+          <a href="account-profile.html" class="wf-mobile-nav__link">Account</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ============================================
+         PAGE CONTENT (Dimmed when drawer is open)
+         ============================================ -->
+    <section class="wf-section" style="min-height: 60vh; opacity: 0.5;">
+      <div class="wf-container">
+        <p class="wf-text-center" style="color: var(--gray-400);">[Page content dimmed when drawer is open]</p>
+      </div>
+    </section>
+
+    <!-- ============================================
+         OVERLAY (Background dim)
+         ============================================ -->
+    <div class="wf-overlay"></div>
+
+    <!-- ============================================
+         CART DRAWER
+         ============================================ -->
+    <div class="wf-drawer wf-cart-drawer">
+
+      <!-- Drawer Header -->
+      <div class="wf-drawer__header">
+        <div>
+          <span class="wf-drawer__title">Quote Cart <span class="wf-badge">3</span></span>
+          <p class="wf-cart-drawer__helper">Review items and submit one quote request for all at once.</p>
+        </div>
+        <div class="wf-drawer__close">X</div>
+      </div>
+
+      <!-- Drawer Body (Line Items) -->
+      <div class="wf-drawer__body">
+
+        <!-- Line Item 1: Fast-Ship (Priced) -->
+        <div class="wf-cart-item">
+          <div class="wf-cart-item__thumb">[Img]</div>
+          <div class="wf-cart-item__details">
+            <div class="wf-cart-item__name">Defender Fume Hood</div>
+            <div class="wf-cart-item__config">48" / Standard Bench-Top / CAV</div>
+            <div class="wf-cart-item__row">
+              <div class="wf-stepper wf-stepper--sm">
+                <button class="wf-stepper__btn">−</button>
+                <input type="text" class="wf-stepper__value">
+                <button class="wf-stepper__btn">+</button>
+              </div>
+              <div class="wf-cart-item__price-wrap">
+                <span class="wf-cart-item__price">$4,850</span>
+              </div>
+            </div>
+          </div>
+          <button class="wf-cart-item__remove">X</button>
+        </div>
+
+        <!-- Line Item 2: Fast-Ship (Priced) -->
+        <div class="wf-cart-item">
+          <div class="wf-cart-item__thumb">[Img]</div>
+          <div class="wf-cart-item__details">
+            <div class="wf-cart-item__name">Hood Base Cabinet</div>
+            <div class="wf-cart-item__config">48" / Standard</div>
+            <div class="wf-cart-item__row">
+              <div class="wf-stepper wf-stepper--sm">
+                <button class="wf-stepper__btn">−</button>
+                <input type="text" class="wf-stepper__value">
+                <button class="wf-stepper__btn">+</button>
+              </div>
+              <div class="wf-cart-item__price-wrap">
+                <span class="wf-cart-item__price">$685</span>
+              </div>
+            </div>
+          </div>
+          <button class="wf-cart-item__remove">X</button>
+        </div>
+
+        <!-- Line Item 3: Quote-Only -->
+        <div class="wf-cart-item">
+          <div class="wf-cart-item__thumb">[Img]</div>
+          <div class="wf-cart-item__details">
+            <div class="wf-cart-item__name">Specialty Fume Hood</div>
+            <div class="wf-cart-item__config">72" / Perchloric / VAV</div>
+            <div class="wf-cart-item__row">
+              <div class="wf-stepper wf-stepper--sm">
+                <button class="wf-stepper__btn">−</button>
+                <input type="text" class="wf-stepper__value">
+                <button class="wf-stepper__btn">+</button>
+              </div>
+              <div class="wf-cart-item__price-wrap">
+                <span class="wf-cart-item__price">$8,250</span>
+              </div>
+            </div>
+          </div>
+          <button class="wf-cart-item__remove">X</button>
+        </div>
+      </div>
+
+      <!-- Drawer Footer -->
+      <div class="wf-drawer__footer">
+        <div class="wf-cart-drawer__total">
+          <span class="wf-cart-drawer__total-label">Estimated total</span>
+          <span class="wf-cart-drawer__total-value">$13,785</span>
+        </div>
+        <p class="wf-cart-drawer__total-note">We'll calculate the shipping cost based on your total item quantity and destination, after you submit your quote.</p>
+
+        <button class="wf-btn wf-btn--primary wf-btn--full">Submit Quote</button>
+        <div class="wf-text-center wf-mt-md">
+          <a href="collection.html" class="wf-link">Continue shopping</a>
+        </div>
+      </div>
+
+    </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobileNav() {
+      const mobileNav = document.getElementById('mobileNav');
+      const menuToggle = document.querySelector('.wf-menu-toggle');
+      mobileNav.classList.toggle('wf-mobile-nav--open');
+      menuToggle.classList.toggle('wf-menu-toggle--open');
+    }
+  </script>
+</body>
+</html>

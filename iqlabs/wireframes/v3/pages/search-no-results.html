@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Results - iQ Labs Wireframe</title>
+  <link rel="stylesheet" href="../wireframe.css">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+  <div class="portal-wrapper">
+    <header class="portal-header">
+      <div class="portal-header__left">
+        <img src="../assets/cilantroe.png" alt="Cilantroe" class="portal-header__logo">
+        <span class="portal-header__divider"></span>
+        <nav class="portal-nav">
+          <span class="portal-nav__trigger">
+            Search No Results
+            <svg class="portal-nav__chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+          <div class="portal-nav__menu">
+            <a href="homepage.html" class="portal-nav__item">Homepage</a>
+            <a href="collections-list.html" class="portal-nav__item">Collections List</a>
+            <a href="collection.html" class="portal-nav__item">Collection Page</a>
+            <a href="product-display-page.html" class="portal-nav__item">Product Display Page</a>
+            <a href="cart.html" class="portal-nav__item">Quote Cart</a>
+            <a href="cart-drawer.html" class="portal-nav__item">Cart Drawer</a>
+            <a href="contact.html" class="portal-nav__item">Contact</a>
+            <a href="about.html" class="portal-nav__item">About</a>
+            <a href="how-we-work.html" class="portal-nav__item">How We Work</a>
+            <a href="project-gallery.html" class="portal-nav__item">Project Gallery</a>
+            <a href="case-study.html" class="portal-nav__item">Case Study</a>
+            <a href="manufacturing-quality.html" class="portal-nav__item">Manufacturing & Quality</a>
+            <a href="certifications-standards.html" class="portal-nav__item">Certifications & Standards</a>
+            <a href="resources.html" class="portal-nav__item">Resources</a>
+            <a href="blog.html" class="portal-nav__item">Blog</a>
+            <a href="blog-post.html" class="portal-nav__item">Blog Post</a>
+            <a href="faq.html" class="portal-nav__item">FAQ</a>
+            <a href="search-results.html" class="portal-nav__item">Search Results</a>
+            <a href="search-no-results.html" class="portal-nav__item portal-nav__item--active">Search No Results</a>
+          </div>
+        </nav>
+      </div>
+      <a href="../../index.html" class="portal-header__back">← Back to Hub</a>
+    </header>
+    <div class="portal-frame">
+      <div class="wf-page-container">
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header class="wf-header">
+      <div class="wf-menu-toggle" onclick="toggleMobileNav()">
+        <span class="wf-menu-toggle__bar"></span>
+        <span class="wf-menu-toggle__bar"></span>
+        <span class="wf-menu-toggle__bar"></span>
+      </div>
+      <a href="homepage.html" class="wf-header__logo">iQ Labs</a>
+      <nav class="wf-header__nav">
+        <div class="wf-nav-dropdown">
+          <span class="wf-nav-dropdown__trigger">
+            Products
+            <svg class="wf-nav-dropdown__chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+          <div class="wf-nav-dropdown__menu">
+            <a href="shop-all.html" class="wf-nav-dropdown__item">Browse All</a>
+            <a href="collection.html" class="wf-nav-dropdown__item">Fume Hoods</a>
+            <a href="collection.html" class="wf-nav-dropdown__item">Tables & Benches</a>
+            <a href="collection.html" class="wf-nav-dropdown__item">Base Cabinets</a>
+            <a href="collection.html" class="wf-nav-dropdown__item">Specialty Cabinets</a>
+            <a href="collection.html" class="wf-nav-dropdown__item">Worksurfaces</a>
+            <a href="collection.html" class="wf-nav-dropdown__item">Accessories</a>
+          </div>
+        </div>
+        <div class="wf-nav-dropdown">
+          <span class="wf-nav-dropdown__trigger">
+            Projects
+            <svg class="wf-nav-dropdown__chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+          <div class="wf-nav-dropdown__menu">
+            <a href="project-gallery.html" class="wf-nav-dropdown__item">Project Gallery</a>
+            <a href="how-we-work.html" class="wf-nav-dropdown__item">How We Work</a>
+          </div>
+        </div>
+        <a href="resources.html" class="wf-header__nav-item">Resources</a>
+        <a href="blog.html" class="wf-header__nav-item">Blog</a>
+        <div class="wf-nav-dropdown">
+          <span class="wf-nav-dropdown__trigger">
+            About
+            <svg class="wf-nav-dropdown__chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+          <div class="wf-nav-dropdown__menu">
+            <a href="about.html" class="wf-nav-dropdown__item">About iQ Labs</a>
+            <a href="manufacturing-quality.html" class="wf-nav-dropdown__item">Manufacturing & Quality</a>
+            <a href="certifications-standards.html" class="wf-nav-dropdown__item">Certifications & Standards</a>
+          </div>
+        </div>
+        <a href="contact.html" class="wf-header__nav-item">Contact</a>
+      </nav>
+      <div class="wf-header__actions">
+        <div class="wf-header__search">
+          <input type="text" class="wf-header__search-input" placeholder="Search products..." aria-label="Search" value="xyz123">
+          <button class="wf-header__search-btn" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+          </button>
+        </div>
+        <a href="account-profile.html" class="wf-header__nav-item wf-header__account">Account</a>
+        <a href="cart.html" class="wf-header__cart">
+          Quote
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+          </svg>
+          <span class="wf-badge">0</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="wf-mobile-nav" id="mobileNav">
+      <div class="wf-mobile-nav__overlay" onclick="toggleMobileNav()"></div>
+      <div class="wf-mobile-nav__panel">
+        <div class="wf-mobile-nav__header">
+          <span class="wf-header__logo">iQ Labs</span>
+          <button class="wf-mobile-nav__close" onclick="toggleMobileNav()">&times;</button>
+        </div>
+        <nav class="wf-mobile-nav__links">
+          <div class="wf-mobile-nav__group">
+            <span class="wf-mobile-nav__group-title">Products</span>
+            <div class="wf-mobile-nav__sublinks">
+              <a href="shop-all.html" class="wf-mobile-nav__sublink">Browse All</a>
+              <a href="collection.html" class="wf-mobile-nav__sublink">Fume Hoods</a>
+              <a href="collection.html" class="wf-mobile-nav__sublink">Tables & Benches</a>
+              <a href="collection.html" class="wf-mobile-nav__sublink">Base Cabinets</a>
+              <a href="collection.html" class="wf-mobile-nav__sublink">Specialty Cabinets</a>
+              <a href="collection.html" class="wf-mobile-nav__sublink">Worksurfaces</a>
+              <a href="collection.html" class="wf-mobile-nav__sublink">Accessories</a>
+            </div>
+          </div>
+          <div class="wf-mobile-nav__group">
+            <span class="wf-mobile-nav__group-title">Projects</span>
+            <div class="wf-mobile-nav__sublinks">
+              <a href="project-gallery.html" class="wf-mobile-nav__sublink">Project Gallery</a>
+              <a href="how-we-work.html" class="wf-mobile-nav__sublink">How We Work</a>
+            </div>
+          </div>
+          <div class="wf-mobile-nav__group">
+            <span class="wf-mobile-nav__group-title">About</span>
+            <div class="wf-mobile-nav__sublinks">
+              <a href="about.html" class="wf-mobile-nav__sublink">About iQ Labs</a>
+              <a href="manufacturing-quality.html" class="wf-mobile-nav__sublink">Manufacturing & Quality</a>
+              <a href="certifications-standards.html" class="wf-mobile-nav__sublink">Certifications & Standards</a>
+            </div>
+          </div>
+          <a href="resources.html" class="wf-mobile-nav__link">Resources</a>
+          <a href="blog.html" class="wf-mobile-nav__link">Blog</a>
+          <a href="contact.html" class="wf-mobile-nav__link">Contact</a>
+          <a href="account-profile.html" class="wf-mobile-nav__link">Account</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ============================================
+         SECTION 1: SEARCH HERO - NO RESULTS
+         ============================================ -->
+    <section class="wf-hero" role="status" aria-live="polite">
+      <div class="wf-container">
+        <p class="wf-hero__eyebrow">Search Results</p>
+        <h1 class="wf-hero__title">No results for "xyz123"</h1>
+        <p class="wf-hero__subtitle">We couldn't find anything matching your search. Try a different term or browse our suggestions below.</p>
+        <div class="wf-hero__actions">
+          <a href="contact.html" class="wf-btn wf-btn--primary">Start a Project</a>
+          <a href="contact.html" class="wf-link wf-link--arrow">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 2: SUGGESTED CATEGORIES
+         ============================================ -->
+    <section class="wf-section">
+      <div class="wf-container">
+        <div class="wf-section-header">
+          <h2 class="wf-section-header__title">Popular Categories</h2>
+        </div>
+
+        <div class="wf-grid wf-grid--3col">
+          <a href="collection.html" class="wf-product-tile">
+            <div class="wf-product-tile__image">[Collection Image]</div>
+            <div class="wf-product-tile__body">
+              <div class="wf-product-tile__title">Base Cabinets</div>
+              <div class="wf-text-placeholder wf-text-placeholder--sm">
+                <div class="wf-text-placeholder__line wf-text-placeholder__line--lg"></div>
+              </div>
+              <span class="wf-link wf-link--arrow">View Collection</span>
+            </div>
+          </a>
+
+          <a href="collection.html" class="wf-product-tile">
+            <div class="wf-product-tile__image">[Collection Image]</div>
+            <div class="wf-product-tile__body">
+              <div class="wf-product-tile__title">Fume Hoods</div>
+              <div class="wf-text-placeholder wf-text-placeholder--sm">
+                <div class="wf-text-placeholder__line wf-text-placeholder__line--lg"></div>
+              </div>
+              <span class="wf-link wf-link--arrow">View Collection</span>
+            </div>
+          </a>
+
+          <a href="collection.html" class="wf-product-tile">
+            <div class="wf-product-tile__image">[Collection Image]</div>
+            <div class="wf-product-tile__body">
+              <div class="wf-product-tile__title">Lab Tables</div>
+              <div class="wf-text-placeholder wf-text-placeholder--sm">
+                <div class="wf-text-placeholder__line wf-text-placeholder__line--lg"></div>
+              </div>
+              <span class="wf-link wf-link--arrow">View Collection</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 4: SEARCH CTA STRIP
+         ============================================ -->
+    <section class="wf-support-strip">
+      <div class="wf-container">
+        <div class="wf-support-strip__content">
+          <div class="wf-support-strip__text">
+            <p class="wf-support-strip__line1">Didn't find what you were looking for?</p>
+            <p class="wf-support-strip__line2">We're here to help you find the right solution for your laboratory needs.</p>
+          </div>
+          <div class="wf-support-strip__actions">
+            <a href="contact.html" class="wf-btn wf-btn--primary">Ask a Question</a>
+            <a href="resources.html" class="wf-link wf-link--arrow">Visit Resources</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="wf-footer">
+      <div class="wf-footer__grid">
+        <div class="wf-footer__column">
+          <div class="wf-footer__column-title">Contact</div>
+          <span class="wf-footer__text">616-583-8876</span>
+          <div class="wf-footer__hours">Mon–Fri, 8am–5pm CT</div>
+          <span class="wf-footer__text">sales@iq-laboratory.com</span>
+          <span class="wf-footer__text">Grand Rapids, MI</span>
+          <div class="wf-footer__social">
+            <a href="#" class="wf-footer__social-link" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="wf-footer__column">
+          <div class="wf-footer__column-title">Get Started</div>
+          <a href="about.html" class="wf-footer__link">About iQ Labs</a>
+          <a href="resources.html" class="wf-footer__link">Resources</a>
+          <a href="project-gallery.html" class="wf-footer__link">Project Gallery</a>
+          <a href="certifications-standards.html" class="wf-footer__link">Certifications & Standards</a>
+        </div>
+        <div class="wf-footer__column">
+          <div class="wf-footer__column-title">Products</div>
+          <a href="collections-list.html" class="wf-footer__link">Browse All</a>
+          <a href="collection.html" class="wf-footer__link">Base Cabinets</a>
+          <a href="collection.html" class="wf-footer__link">Specialty Cabinets</a>
+          <a href="collection.html" class="wf-footer__link">Tables</a>
+          <a href="collection.html" class="wf-footer__link">Benches</a>
+          <a href="collection.html" class="wf-footer__link">Accessories</a>
+          <a href="collection.html" class="wf-footer__link">Fume Hoods</a>
+          <a href="collection.html" class="wf-footer__link">Worksurfaces</a>
+        </div>
+        <div class="wf-footer__column wf-footer__column--spaced">
+          <div class="wf-footer__column-title">Support</div>
+          <a href="contact.html" class="wf-footer__link">Ask a Question</a>
+          <a href="contact.html" class="wf-footer__link">Warranty & Service</a>
+          <a href="contact.html" class="wf-footer__link">Shipping & Receiving</a>
+          <a href="how-we-work.html" class="wf-footer__link">How We Work</a>
+          <a href="faq.html" class="wf-footer__link">FAQs</a>
+          <a href="contact.html" class="wf-link wf-link--arrow wf-footer__link--bottom">Become a Dealer</a>
+        </div>
+      </div>
+      <div class="wf-footer__partners">
+        <div class="wf-footer__partners-title">Our Partners</div>
+        <div class="wf-footer__partners-logos">
+          <span class="wf-footer__partner-logo">WB Mfg</span>
+          <span class="wf-footer__partner-logo">Diversified Spaces</span>
+        </div>
+      </div>
+      <div class="wf-footer__bottom">
+        <span>&copy; 2026 iQ Labs. All rights reserved.</span>
+        <span>Privacy Policy | Terms & Conditions | Accessibility Statement</span>
+      </div>
+    </footer>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobileNav() {
+      const mobileNav = document.getElementById('mobileNav');
+      const menuToggle = document.querySelector('.wf-menu-toggle');
+      mobileNav.classList.toggle('wf-mobile-nav--open');
+      menuToggle.classList.toggle('wf-menu-toggle--open');
+    }
+  </script>
+</body>
+</html>

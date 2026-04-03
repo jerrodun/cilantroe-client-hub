@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - iQ Labs Wireframe</title>
+  <link rel="stylesheet" href="../wireframe.css">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <style>
+    /* Shopify Account Page Specific Styles */
+    .wf-account-page {
+      min-height: 100vh;
+      background: var(--gray-100);
+    }
+
+    /* Account Header */
+    .wf-account-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: var(--space-md) var(--space-xl);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .wf-account-header__left {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xl);
+    }
+
+    .wf-account-header__nav {
+      display: flex;
+      gap: var(--space-lg);
+    }
+
+    .wf-account-header__nav-link {
+      font-size: var(--text-sm);
+      color: var(--gray-700);
+      text-decoration: none;
+    }
+
+    .wf-account-header__nav-link--active {
+      text-decoration: underline;
+    }
+
+    .wf-account-header__right {
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+    }
+
+    .wf-account-header__address {
+      font-size: var(--text-sm);
+      color: var(--gray-700);
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    .wf-account-header__user {
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--gray-300);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wf-account-header__user svg {
+      width: 18px;
+      height: 18px;
+      color: var(--gray-500);
+    }
+
+    /* Account Content */
+    .wf-account-content {
+      padding: var(--space-xl);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .wf-account-content {
+        padding: var(--space-lg);
+      }
+    }
+
+    /* Page Title */
+    .wf-profile-title {
+      font-size: var(--text-xl);
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-bottom: var(--space-xl);
+    }
+
+    /* Profile Card */
+    .wf-profile-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-lg);
+    }
+
+    .wf-profile-card--flush {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    /* Profile Field */
+    .wf-profile-field {
+      margin-bottom: var(--space-md);
+    }
+
+    .wf-profile-field:last-child {
+      margin-bottom: 0;
+    }
+
+    .wf-profile-field__label {
+      font-size: var(--text-sm);
+      color: var(--gray-500);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-xs);
+    }
+
+    .wf-profile-field__label svg {
+      width: 14px;
+      height: 14px;
+      color: var(--gray-400);
+    }
+
+    .wf-profile-field__value {
+      font-size: var(--text-sm);
+      color: var(--gray-800);
+    }
+
+    /* Company Header */
+    .wf-profile-company {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-bottom: var(--space-md);
+    }
+
+    .wf-profile-company svg {
+      width: 18px;
+      height: 18px;
+      color: var(--gray-500);
+    }
+
+    /* Location Bar */
+    .wf-profile-location {
+      background: var(--gray-100);
+      padding: var(--space-md) var(--space-lg);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      font-size: var(--text-sm);
+      font-weight: 500;
+      color: var(--gray-800);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .wf-profile-location svg {
+      width: 18px;
+      height: 18px;
+      color: var(--gray-500);
+    }
+
+    /* Section within card */
+    .wf-profile-section {
+      padding: var(--space-lg);
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .wf-profile-section:last-child {
+      border-bottom: none;
+    }
+
+    .wf-profile-section__title {
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-bottom: var(--space-md);
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    .wf-profile-section__link {
+      font-size: var(--text-sm);
+      color: var(--gray-600);
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+    /* Address Grid */
+    .wf-profile-address-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+    }
+
+    @media (max-width: 768px) {
+      .wf-profile-address-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .wf-profile-address__label {
+      font-size: var(--text-sm);
+      color: var(--gray-500);
+      margin-bottom: var(--space-sm);
+    }
+
+    .wf-profile-address__value {
+      font-size: var(--text-sm);
+      color: var(--gray-800);
+      line-height: 1.6;
+    }
+
+    /* Notice Box */
+    .wf-profile-notice {
+      background: var(--gray-100);
+      border-radius: var(--radius-md);
+      padding: var(--space-md) var(--space-lg);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      font-size: var(--text-sm);
+      color: var(--gray-700);
+      margin-bottom: var(--space-lg);
+    }
+
+    .wf-profile-notice svg {
+      width: 18px;
+      height: 18px;
+      color: var(--gray-500);
+      flex-shrink: 0;
+    }
+
+    /* Staff Table */
+    .wf-profile-table {
+      width: 100%;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow: hidden;
+    }
+
+    .wf-profile-table th,
+    .wf-profile-table td {
+      text-align: left;
+      padding: var(--space-md) var(--space-lg);
+      font-size: var(--text-sm);
+    }
+
+    .wf-profile-table th {
+      background: var(--gray-50);
+      color: var(--gray-500);
+      font-weight: 400;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .wf-profile-table td {
+      color: var(--gray-800);
+    }
+
+    /* Mobile Staff Table - Card Layout */
+    @media (max-width: 600px) {
+      .wf-profile-table {
+        border: none;
+      }
+
+      .wf-profile-table thead {
+        display: none;
+      }
+
+      .wf-profile-table,
+      .wf-profile-table tbody,
+      .wf-profile-table tr,
+      .wf-profile-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .wf-profile-table tr {
+        background: var(--gray-50);
+        border: 1px solid var(--gray-200);
+        border-radius: var(--radius-md);
+        padding: var(--space-md);
+        margin-bottom: var(--space-md);
+      }
+
+      .wf-profile-table tr:last-child {
+        margin-bottom: 0;
+      }
+
+      .wf-profile-table td {
+        padding: var(--space-sm) 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--gray-200);
+      }
+
+      .wf-profile-table td:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .wf-profile-table td:first-child {
+        padding-top: 0;
+      }
+
+      .wf-profile-table td::before {
+        content: attr(data-label);
+        font-weight: 400;
+        color: var(--gray-500);
+        flex-shrink: 0;
+        margin-right: var(--space-md);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="portal-wrapper">
+    <header class="portal-header">
+      <div class="portal-header__left">
+        <img src="../assets/cilantroe.png" alt="Cilantroe" class="portal-header__logo">
+        <span class="portal-header__divider"></span>
+        <nav class="portal-nav">
+          <span class="portal-nav__trigger">
+            Account Profile
+            <svg class="portal-nav__chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+          <div class="portal-nav__menu">
+            <a href="homepage.html" class="portal-nav__item">Homepage</a>
+            <a href="collections-list.html" class="portal-nav__item">Collections List</a>
+            <a href="collection.html" class="portal-nav__item">Collection Page</a>
+            <a href="product-display-page.html" class="portal-nav__item">Product Display Page</a>
+            <a href="cart.html" class="portal-nav__item">Quote Cart</a>
+            <a href="cart-drawer.html" class="portal-nav__item">Cart Drawer</a>
+            <a href="contact.html" class="portal-nav__item">Contact</a>
+            <a href="about.html" class="portal-nav__item">About</a>
+            <a href="how-we-work.html" class="portal-nav__item">How We Work</a>
+            <a href="project-gallery.html" class="portal-nav__item">Project Gallery</a>
+            <a href="case-study.html" class="portal-nav__item">Case Study</a>
+            <a href="manufacturing-quality.html" class="portal-nav__item">Manufacturing & Quality</a>
+            <a href="certifications-standards.html" class="portal-nav__item">Certifications & Standards</a>
+            <a href="resources.html" class="portal-nav__item">Resources</a>
+            <a href="blog.html" class="portal-nav__item">Blog / Blog</a>
+            <a href="blog-post.html" class="portal-nav__item">Blog Post</a>
+            <a href="faq.html" class="portal-nav__item">FAQ</a>
+            <a href="account-login.html" class="portal-nav__item">Account Login</a>
+            <a href="account-quotes.html" class="portal-nav__item">Account Quotes</a>
+            <a href="account-quotes-confirmed.html" class="portal-nav__item">Account Quotes Confirmed</a>
+            <a href="account-quote-detail.html" class="portal-nav__item">Quote Detail</a>
+            <a href="account-profile.html" class="portal-nav__item portal-nav__item--active">Account Profile</a>
+          </div>
+        </nav>
+      </div>
+      <a href="../../index.html" class="portal-header__back">← Back to Hub</a>
+    </header>
+    <div class="portal-frame">
+
+      <!-- ============================================
+           SHOPIFY ACCOUNT - PROFILE PAGE
+           Note: This is Shopify's customer account.
+           Limited customization available in production.
+           ============================================ -->
+      <div class="wf-account-page">
+
+        <!-- Account Header -->
+        <header class="wf-account-header">
+          <div class="wf-account-header__left">
+            <span class="wf-header__logo">iQ Labs</span>
+            <nav class="wf-account-header__nav">
+              <a href="account-quotes.html" class="wf-account-header__nav-link">Quotes</a>
+              <a href="account-profile.html" class="wf-account-header__nav-link wf-account-header__nav-link--active">Profile</a>
+            </nav>
+          </div>
+          <div class="wf-account-header__right">
+            <span class="wf-account-header__address">
+              123 Main Street
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="12" height="12">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+            <span class="wf-account-header__user">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0" />
+              </svg>
+            </span>
+          </div>
+        </header>
+
+        <!-- Content -->
+        <div class="wf-account-content">
+
+          <h1 class="wf-profile-title">Profile</h1>
+
+          <!-- Name & Email Card -->
+          <div class="wf-profile-card">
+            <div class="wf-profile-field">
+              <div class="wf-profile-field__label">
+                Name
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+                </svg>
+              </div>
+            </div>
+            <div class="wf-profile-field">
+              <div class="wf-profile-field__label">Email</div>
+              <div class="wf-profile-field__value">email@example.com</div>
+            </div>
+          </div>
+
+          <!-- Company Section -->
+          <div class="wf-profile-company">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+            </svg>
+            Company Name
+          </div>
+
+          <!-- Company Details Card -->
+          <div class="wf-profile-card wf-profile-card--flush">
+
+            <!-- Location Bar -->
+            <div class="wf-profile-location">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              123 Main Street
+            </div>
+
+            <!-- Addresses Section -->
+            <div class="wf-profile-section">
+              <div class="wf-profile-section__title">Addresses</div>
+              <div class="wf-profile-address-grid">
+                <div>
+                  <div class="wf-profile-address__label">Billing address</div>
+                  <div class="wf-profile-address__value">
+                    Company Name<br>
+                    123 Main Street<br>
+                    Grand Rapids MI 49503<br>
+                    United States
+                  </div>
+                </div>
+                <div>
+                  <div class="wf-profile-address__label">Shipping address</div>
+                  <div class="wf-profile-address__value">
+                    Company Name<br>
+                    123 Main Street<br>
+                    Grand Rapids MI 49503<br>
+                    United States
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Methods Section -->
+            <div class="wf-profile-section">
+              <div class="wf-profile-section__title">
+                Payment methods
+                <a href="#" class="wf-profile-section__link">+ Add</a>
+              </div>
+              <div class="wf-profile-notice">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                </svg>
+                No payment methods added
+              </div>
+              <div class="wf-profile-field">
+                <div class="wf-profile-field__label">Payment terms</div>
+                <div class="wf-profile-field__value">Net 30</div>
+              </div>
+            </div>
+
+            <!-- Staff and Permissions Section -->
+            <div class="wf-profile-section">
+              <div class="wf-profile-section__title">Staff and permissions</div>
+              <table class="wf-profile-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Permissions</th>
+                    <th>Email</th>
+                    <th>Phone number</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Name">You</td>
+                    <td data-label="Permissions">Ordering only</td>
+                    <td data-label="Email">email@example.com</td>
+                    <td data-label="Phone">—</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
